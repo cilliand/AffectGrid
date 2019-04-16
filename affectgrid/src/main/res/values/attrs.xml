@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AffectGrid">
+        <attr name="columns" format="integer" />
+        <attr name="rows" format="integer" />
+        <attr name="selectColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="highlight_axes" format="boolean" />
+        <attr name="y_axis_color" format="color" />
+        <attr name="x_axis_color" format="color" />
+    </declare-styleable>
+</resources>

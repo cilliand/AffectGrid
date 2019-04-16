@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AffectGrid</string>
+    <string name="unpleasant_feelings">unpleasant feelings</string>
+    <string name="pleasant_feelings">pleasant feelings</string>
+    <string name="stress">stress</string>
+    <string name="high_arousal">high arousal</string>
+    <string name="excitement">excitement</string>
+    <string name="depression">depression</string>
+    <string name="sleepiness">sleepiness</string>
+    <string name="relaxation">relaxation</string>
+</resources>
