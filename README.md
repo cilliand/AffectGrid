@@ -5,13 +5,13 @@ A pretty simple library that allows to gather user ratings on an Affect Grid.
 
 The grid allows for highlighting the axes:
 
-![In-app screenshot of Affect Grid with Axes Highlighted](screenshots/1.jpg?raw=true&s=2 "Grid with Axes Highlighted")
+![In-app screenshot of Affect Grid with Axes Highlighted](screenshots/1.jpg?raw=false "Grid with Axes Highlighted")
 
 Hiding them completely:
-![In-app screenshot of Affect Grid with Axes Hidden](screenshots/2.jpg?raw=true "Grid with Axes Hidden")
+![In-app screenshot of Affect Grid with Axes Hidden](screenshots/2.jpg?raw=false "Grid with Axes Hidden")
 
 And having more or less fine-grained feedback:
-![In-app screenshot of Affect Grid sized 20 by 20](screenshots/3.jpg?raw=true "21x21 grid.")
+![In-app screenshot of Affect Grid sized 20 by 20](screenshots/3.jpg?raw=false "21x21 grid.")
 
 The ratings can be gathered as raw values or as normalized values. 
 
