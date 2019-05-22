@@ -49,8 +49,8 @@ public class AffectGrid extends RelativeLayout {
      * Instantiates a new AffectGrid object, passes XML values to grid object
      * and replaces the temporary one in the view.
      *
-     * @param context
-     * @param attrs
+     * @param context Context
+     * @param attrs Attributes
      */
     public AffectGrid(final Context context, final AttributeSet attrs) {
         super(context, attrs);
@@ -113,7 +113,7 @@ public class AffectGrid extends RelativeLayout {
     /**
      * Hide or show axes, will set axes labels colored or theme text color if not shown.
      *
-     * @param showAxes
+     * @param showAxes Should axes be shown
      */
     public void setShowAxes(boolean showAxes) {
         this.showAxes = showAxes;
@@ -150,7 +150,7 @@ public class AffectGrid extends RelativeLayout {
     /**
      * Change the grid's origin.
      *
-     * @param origin
+     * @param origin Origin of coordinate system
      */
     public void setOrigin(ORIGIN origin){
         grid.setOrigin(origin);
@@ -159,17 +159,16 @@ public class AffectGrid extends RelativeLayout {
 
     /**
      * Get the selected x, y coordinates.
-     *
-     * @return integer array of x, y coordinate
+     * @param x horizontal value to be selected
+     * @param y vertical value to be selected
      */
     public void setSelectedValue(int x, int y) {
         grid.setSelectedValue(x, y);
     }
 
     /**
-     * Get the selected x, y coordinates.
-     *
-     * @return integer array of x, y coordinate
+     * Set the selected x, y coordinates.
+     * @param values List of x, y coordinate values to set as selected.
      */
     public void setSelectedValues(List<int[]> values) {
         grid.setSelectedValues(values);
@@ -233,7 +232,7 @@ public class AffectGrid extends RelativeLayout {
     /**
      * Set a different OnValueChangedListener
      *
-     * @param onValueChangedListener
+     * @param onValueChangedListener AffectGrid.ValueChangedListener implementation to set
      */
     public void setOnValueChangedListener(OnValueChangedListener onValueChangedListener){
         this.onValueChangedListener = onValueChangedListener;

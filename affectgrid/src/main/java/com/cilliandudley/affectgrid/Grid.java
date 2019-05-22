@@ -174,7 +174,6 @@ class Grid extends View {
 
             }
         }
-        setSelectedValue(selectedValue[0], selectedValue[1]);
 
         firstRun = false;
         for (int c = 0; c < COLS + 1; c++) {
@@ -190,7 +189,7 @@ class Grid extends View {
 
     }
 
-    void setSelectedValue(final float x, final float y) {
+    void setSelectedValue(final int x, final int y) {
         Tile tile;
         for (int r = 0; r < ROWS; r++) {
             for (int c = 0; c < COLS; c++) {
@@ -202,6 +201,8 @@ class Grid extends View {
                 }
             }
         }
+        selectedValue[0] = x;
+        selectedValue[1] = y;
         invalidate();
     }
 
