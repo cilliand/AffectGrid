@@ -12,6 +12,8 @@ import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.List;
+
 /**
  * Created by Cillian Dudley on 18/01/2018.
  *
@@ -43,6 +45,8 @@ class Grid extends View {
     private boolean touchEventsEnabled = true;
 
     private AffectGrid.ORIGIN origin = AffectGrid.ORIGIN.CORNER;
+
+    private boolean isUserTouched = false;
 
     Grid(Context context, AttributeSet attrs, int defStyle) {
         this(context, attrs);
@@ -170,7 +174,7 @@ class Grid extends View {
 
             }
         }
-        setSelected(selectedValue[0], selectedValue[1]);
+        setSelectedValue(selectedValue[0], selectedValue[1]);
 
         firstRun = false;
         for (int c = 0; c < COLS + 1; c++) {
@@ -186,7 +190,7 @@ class Grid extends View {
 
     }
 
-    void setSelected(final float x, final float y) {
+    void setSelectedValue(final float x, final float y) {
         Tile tile;
         for (int r = 0; r < ROWS; r++) {
             for (int c = 0; c < COLS; c++) {
@@ -336,5 +340,25 @@ class Grid extends View {
 
     void enableTouchEvents() {
         this.touchEventsEnabled = true;
+    }
+
+    public void setSelectedValues(List<int[]> selectedValues) {
+
+        for (int r = 0; r < ROWS; r++) {
+            for (int c = 0; c < COLS; c++) {
+                mTiles[r][c].removeTouch();
+            }
+        }
+
+        for (int[] point : selectedValues) {
+            for (int r = 0; r < ROWS; r++) {
+                for (int c = 0; c < COLS; c++) {
+                    if (c == point[0] && r == point[1]) {
+                        mTiles[r][c].handleTouch();
+                    }
+                }
+            }
+        }
+        invalidate();
     }
 }

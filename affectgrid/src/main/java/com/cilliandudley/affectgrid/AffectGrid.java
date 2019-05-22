@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.List;
+
 /**
  * Created by Cillian Dudley on 14/01/2018.
  *
@@ -152,6 +154,25 @@ public class AffectGrid extends RelativeLayout {
      */
     public void setOrigin(ORIGIN origin){
         grid.setOrigin(origin);
+    }
+
+
+    /**
+     * Get the selected x, y coordinates.
+     *
+     * @return integer array of x, y coordinate
+     */
+    public void setSelectedValue(int x, int y) {
+        grid.setSelectedValue(x, y);
+    }
+
+    /**
+     * Get the selected x, y coordinates.
+     *
+     * @return integer array of x, y coordinate
+     */
+    public void setSelectedValues(List<int[]> values) {
+        grid.setSelectedValues(values);
     }
 
     /**
