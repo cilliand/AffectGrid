@@ -12,10 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:columns="21"
+        app:highlight_axes="true"
         app:rows="21"
-        app:highlight_axes="false"
-        app:x_axis_color="@color/colorPrimary"
-        />
+        app:textColor="@android:color/holo_red_dark"
+        app:x_axis_color="@android:color/holo_green_dark" />
 
     <TextView
         android:id="@+id/result_text_view"

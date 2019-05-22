@@ -33,7 +33,8 @@ public class AffectGrid extends RelativeLayout {
     private Grid grid;
 
     private int XAxisColor = Color.GREEN;
-    private int YAxisColor= Color.RED;
+    private int YAxisColor = Color.RED;
+    private int textColor;
     private boolean showAxes = true;
 
     private OnValueChangedListener onValueChangedListener;
@@ -74,6 +75,7 @@ public class AffectGrid extends RelativeLayout {
             showAxes = typedArray.getBoolean(R.styleable.AffectGrid_highlight_axes, true);
             XAxisColor = typedArray.getColor(R.styleable.AffectGrid_x_axis_color, XAxisColor);
             YAxisColor = typedArray.getColor(R.styleable.AffectGrid_y_axis_color, YAxisColor);
+            textColor = typedArray.getColor(R.styleable.AffectGrid_textColor, getTextColorFromTheme());
         } finally {
             if(showAxes) {
                 setXAxisColor(XAxisColor);
@@ -82,6 +84,10 @@ public class AffectGrid extends RelativeLayout {
             } else {
                 setShowAxes(false);
             }
+            ((TextView) findViewById(R.id.textView_stress)).setTextColor(getTextColor());
+            ((TextView) findViewById(R.id.textView_excitement)).setTextColor(getTextColor());
+            ((TextView) findViewById(R.id.textView_depression)).setTextColor(getTextColor());
+            ((TextView) findViewById(R.id.textView_relaxation)).setTextColor(getTextColor());
         }
         typedArray.recycle();
     }
@@ -126,10 +132,10 @@ public class AffectGrid extends RelativeLayout {
             ((TextView)findViewById(R.id.unpleasant_feelings_text)).setTextColor(YAxisColor);
             ((TextView)findViewById(R.id.pleasant_feelings_text)).setTextColor(YAxisColor);
         } else {
-            ((TextView)findViewById(R.id.textView_Activation)).setTextColor(getTextColorFromTheme());
-            ((TextView)findViewById(R.id.textView_deactivation)).setTextColor(getTextColorFromTheme());
-            ((TextView)findViewById(R.id.unpleasant_feelings_text)).setTextColor(getTextColorFromTheme());
-            ((TextView)findViewById(R.id.pleasant_feelings_text)).setTextColor(getTextColorFromTheme());
+            ((TextView) findViewById(R.id.textView_Activation)).setTextColor(getTextColor());
+            ((TextView) findViewById(R.id.textView_deactivation)).setTextColor(getTextColor());
+            ((TextView) findViewById(R.id.unpleasant_feelings_text)).setTextColor(getTextColor());
+            ((TextView) findViewById(R.id.pleasant_feelings_text)).setTextColor(getTextColor());
         }
     }
 
@@ -254,6 +260,9 @@ public class AffectGrid extends RelativeLayout {
         return Color.BLACK;
     }
 
+    private int getTextColor() {
+        return textColor;
+    }
     public interface OnValueChangedListener {
 
         void onValueChanged();
