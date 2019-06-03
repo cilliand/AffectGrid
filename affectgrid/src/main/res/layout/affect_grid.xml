@@ -135,7 +135,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|center_horizontal"
                     android:rotation="180"
-                    android:text="@string/unpleasant_feelings" />
+                    android:text="@string/pleasant_feelings" />
             </LinearLayout>
 
         </LinearLayout>
