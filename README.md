@@ -31,7 +31,7 @@ and add the following to your dependencies:
 
 ```
 dependencies {
-  implementation 'com.cilliandudley.affectgrid:affectgrid:1.0.0'
+  implementation 'com.cilliandudley.affectgrid:affectgrid:1.0.4'
 }
 ```
 
